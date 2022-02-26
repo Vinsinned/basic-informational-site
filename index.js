@@ -18,7 +18,39 @@ const server = http.createServer((req, res) => {
 				res.end(); 
 			}
 		});
+	} else if (req.url == '/about') {
+		fs.readFile('./about.html', function (err, data) {
+			if (err) {
+				response.writeHead(404);
+				throw err; 
+			}  
+			else {
+				res.write(data);  
+				res.end(); 
+			}
+		});
+	} else if (req.url == '/contact-me') {
+		fs.readFile('./contact-me.html', function (err, data) {
+			if (err) {
+				response.writeHead(404);
+				throw err; 
+			}  
+			else {
+				res.write(data);  
+				res.end(); 
+			}
+		});
 	} else {
-		res.end('<h1>Hello im vinsonnn</h1>'); 
+		fs.readFile('./404.html', function (err, data) {
+			if (err) {
+				response.writeHead(404);
+				res.end('<h1>ERROR 404</h1>')
+				throw err; 
+			}  
+			else {
+				res.write(data);  
+				res.end(); 
+			}
+		});
 	}
 }).listen(port);
