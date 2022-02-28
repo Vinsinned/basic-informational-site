@@ -1,0 +1,22 @@
+{
+  "name": "basic-informational-site",
+  "version": "1.0.0",
+  "description": "This is a no fuss no styling site, with the only point of this project being to practice my new-found skills of Node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vinsinned/basic-informational-site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vinsinned/basic-informational-site/issues"
+  },
+  "homepage": "https://github.com/Vinsinned/basic-informational-site#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
